@@ -21,6 +21,20 @@ spec:
       - image: alishersa1233/flask-app
         name: flask-app
         env:
+        - name: CPU
+          valueFrom:
+            resourceFieldRef:
+              containerName: flask-app-conf
+              resource: requests.cpu
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: MEMORY
+          valueFrom:
+            resourceFieldRef:
+              containerName: flask-app-conf
+              resource: requests.memory
         - name: ENV
           valueFrom:
             configMapKeyRef:
