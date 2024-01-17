@@ -1,8 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kubernetes.io/ingress.class: nginx
   creationTimestamp: null
   labels:
     app: flask-app-conf
