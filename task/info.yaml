@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 data:
   env: development
   grpc_port: "8080"
@@ -6,4 +6,4 @@ data:
 kind: ConfigMap
 metadata:
   creationTimestamp: null
-  name: info
+  name: exam-35
