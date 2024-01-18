@@ -1,0 +1,2 @@
+  kubectl exec -it nginx1 bash
+  curl 65.109.14.160:32127/check-ingress
