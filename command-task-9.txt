@@ -1,0 +1,1 @@
+ kubectl expose deploy frontend-app --port 80 --target-port 80 --type NodePort --name frontend-app-node
