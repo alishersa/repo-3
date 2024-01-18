@@ -1,0 +1,43 @@
+Name:                   flask-app-conf
+Namespace:              exam-35
+CreationTimestamp:      Thu, 18 Jan 2024 08:50:19 +0500
+Labels:                 app=flask-app-conf
+Annotations:            deployment.kubernetes.io/revision: 3
+Selector:               app=flask-app-conf
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=flask-app-conf
+  Containers:
+   flask-app:
+    Image:      alishersa1233/flask-app
+    Port:       <none>
+    Host Port:  <none>
+    Limits:
+      cpu:     128m
+      memory:  200Mi
+    Requests:
+      cpu:        64m
+      memory:     100Mi
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  flask-app-conf-598db859bf (0/0 replicas created), flask-app-conf-5847b97965 (0/0 replicas created)
+NewReplicaSet:   flask-app-conf-5544786d79 (3/3 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  50m   deployment-controller  Scaled up replica set flask-app-conf-5847b97965 to 3 from 1
+  Normal  ScalingReplicaSet  43m   deployment-controller  Scaled up replica set flask-app-conf-5544786d79 to 1
+  Normal  ScalingReplicaSet  43m   deployment-controller  Scaled down replica set flask-app-conf-5847b97965 to 2 from 3
+  Normal  ScalingReplicaSet  43m   deployment-controller  Scaled up replica set flask-app-conf-5544786d79 to 2 from 1
+  Normal  ScalingReplicaSet  43m   deployment-controller  Scaled down replica set flask-app-conf-5847b97965 to 1 from 2
+  Normal  ScalingReplicaSet  43m   deployment-controller  Scaled up replica set flask-app-conf-5544786d79 to 3 from 2
+  Normal  ScalingReplicaSet  43m   deployment-controller  Scaled down replica set flask-app-conf-5847b97965 to 0 from 1
