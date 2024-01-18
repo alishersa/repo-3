@@ -1,0 +1,1 @@
+kubectl scale deployment flask-app-conf --replicas 3
