@@ -1,0 +1,2 @@
+kubectl create ingress flask-app-conf --rule b.bkm.uz/=flask-app-conf:80 --dry-run=client -o yaml > ingress.yaml
+curl b.bkm.uz:80
