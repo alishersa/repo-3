@@ -1,0 +1,2 @@
+NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+flask-app-conf   ClusterIP   10.233.34.156   <none>        80/TCP    13m
