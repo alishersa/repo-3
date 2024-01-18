@@ -1,6 +1,6 @@
 apiVersion: v1
 data:
-  DB_URI: T1NUR1JFUzovL2FkbWluOnN1cGVyc2VjcmV0QDEwLjEwLjEwLjE6NTQzMg==
+  DB_URI: T1NUR1JFUzovL2FkbWluOnN1cGVyc2VjcmV0QDEwLjEwLjEwLjE6NTQzMi9leGFtLWRi
 kind: Secret
 metadata:
   creationTimestamp: null

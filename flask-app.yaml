@@ -6,7 +6,7 @@ metadata:
     app: flask-app-conf
   name: flask-app-conf
 spec:
-  replicas: 1
+  replicas: 3 
   selector:
     matchLabels:
       app: flask-app-conf
@@ -26,25 +26,25 @@ spec:
             resourceFieldRef:
               containerName: flask-app-conf
               resource: requests.cpu
-        - name: POD_IP
-          valueFrom:
-            fieldRef:
-              fieldPath: status.podIP
-        - name: MEMORY
-          valueFrom:
-            resourceFieldRef:
-              containerName: flask-app-conf
-              resource: requests.memory
-        - name: ENV
-          valueFrom:
-            configMapKeyRef:
-              name: environment
-              key: LOG_LEVEL
-        - name: TOKEN
-          valueFrom:
-            secretKeyRef:
-              name: database
-              key: DB_URI
+#        - name: POD_IP
+#          valueFrom:
+#            fieldRef:
+#              fieldPath: status.podIP
+#        - name: MEMORY
+#          valueFrom:
+#            resourceFieldRef:
+#              containerName: flask-app-conf
+#              resource: requests.memory
+#        - name: ENV
+#          valueFrom:
+#            configMapKeyRef:
+#              name: environment
+#              key: LOG_LEVEL
+#        - name: TOKEN
+#          valueFrom:
+#            secretKeyRef:
+#              name: database
+#              key: DB_URI
         resources:
           requests:
             memory: "100Mi"
