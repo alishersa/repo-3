@@ -1,0 +1,2 @@
+kubectl port-forward --address 0.0.0.0 pod/flask-app-54559c45cc-4ggxf 8080:5000
+kubectl create deploy flask-app --image nvrbckdown/flask-app
