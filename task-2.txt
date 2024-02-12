@@ -1,2 +1,5 @@
+
+```
 kubectl run nginx2 --image nginx:latest -l author=Alisher --port 80
-kubectl run nginx1 --image nginx:latest -l project=practice --port 80
+kubectl run nginx1 --image nginx:latest -l last=final --port 80
+```
